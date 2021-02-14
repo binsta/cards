@@ -3,11 +3,9 @@ defmodule Cards do
     values = ["Ace", "Two", "Three", "Four", "Five"]
     suits = ["Spades", "Clubs", "Hearts", "Diamond"]
 
-    for values <- values do
-      for suit <- suits do
+     for suit <- suits, value <- values do
         "#{value} of #{suit}"
       end
-    end
   end
   def shuffle(deck) do
     Enum.shuffle(deck)
